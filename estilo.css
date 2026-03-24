@@ -1,4 +1,17 @@
-h1{
-    font-size: 50px;
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+
+:root{
+    --cor-de-fundo:#1e1e1e;
+    --cor-texto-principal:#85C79A;
+    --cor-texto-secundaria:#EDF7BD;
+    --botao-ativo: #4E8D9C;
+    --botao-inativo:#281C59;
+
+}
+
+
+body{
+    background: var(--cor-de-fundo);
+    color: var(--cor-texto-principal);
+    font-family: "Changa", sans-serif;
 }
