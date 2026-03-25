@@ -15,3 +15,10 @@ body{
     color: var(--cor-texto-principal);
     font-family: "Changa", sans-serif;
 }
+
+.conteudo-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
