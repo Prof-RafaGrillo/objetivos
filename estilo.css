@@ -32,3 +32,13 @@ body{
     width: 100%;
     font-size: 32px;
 }
+.titulo-principal span{
+    color: red;
+}
+
+.botao{
+    background-color: var(--botao-inativo);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
