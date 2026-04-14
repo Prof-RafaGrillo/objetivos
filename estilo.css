@@ -63,7 +63,7 @@ body{
     display: block;
 }
 .abas-textos{
-    background-color: var(--cor-de-fundo);
+    background-color: var(--botao-inativo);
     padding: 40px;
     border-radius: 0 0 40px 40px;
 }
