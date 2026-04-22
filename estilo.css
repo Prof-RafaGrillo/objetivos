@@ -80,6 +80,11 @@ body{
     color: var(--cor-texto-secundaria);
     text-transform: uppercase;
 }
+.contador{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
 
