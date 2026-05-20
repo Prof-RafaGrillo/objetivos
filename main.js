@@ -23,10 +23,40 @@ for(let i = 0; i<botoes.length;i++){
 
  const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4]
 
- function calculaTempo(tempoObjetivo){
+ function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
-    let tempoFinal = tempoObjetivo - tempoAtual
-    console.log(tempoFinal)
- }
+    let tempoFinal = tempoObjetivo - tempoAtual;
+    let segundos = Math.floor(tempoFinal / 1000);
+    let minutos = Math.floor(segundos / 60);
+    let horas = Math.floor(minutos / 60);
+    let dias = Math.floor(horas / 24);
 
- calculaTempo(tempoObjetivo1)
+    segundos %= 60;
+    minutos %= 60;
+    horas %= 24;
+    if (tempoFinal > 0){
+        return [dias,horas,minutos,segundos];
+    } else {
+        return [0,0,0,0];
+    }
+}
+
+function atualizaCronometro(){
+    for(let i = 0; i<contadores.length;i++){
+        const [dias, horas, minutos, segundos] = calculaTempo(tempos[i])
+        const contador = contadores[i]
+        const numeros = contador.querySelectorAll(".contador-digito-numerico")
+     
+        if(numeros.length >=0){
+            numeros[0].textContent = dias
+            numeros[1].textContent = horas
+            numeros[2].textContent = minutos
+            numeros[3].textContent = segundos
+        }
+    }
+}
+ function comecaCronometro(){
+    atualizaCronometro()
+    setInterval(atualizaCronometro, 1000)
+ }
+ comecaCronometro()
